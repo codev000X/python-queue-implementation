@@ -20,3 +20,10 @@ class Queue:
             return 'Queue is Empty .'
         self.item.pop(0)
         
+    def peek(self):
+        if self.isEmpty():
+            return 'Queue is Empty .'
+        return self.item[0]
+
+    def delete(self):
+        self.item = None
