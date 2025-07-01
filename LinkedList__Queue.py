@@ -14,3 +14,19 @@ class LinkedList:
         while True:
             yield curr.value
             curr.next
+
+class Queue:
+    def __init__(self):
+        self.linkedList = LinkedList()
+
+    def __str__(self):
+        values = [str(x) for x in self.linkedList]
+        return ' '.join(values)
+
+    def enqueue(self ,value):
+        new_node = Node(value)
+        if self.linkedList.head is None:
+            self.linkedList.head = self.linkedList.tail =new_node
+        else:
+            self.linkedList.tail.next = new_node
+            self.linkedList.tail = new_node
