@@ -17,3 +17,7 @@ print(customqueue)
 # Dequeuing via popleft() .
 customqueue.popleft()
 print(customqueue)
+
+# Clearing the Queue via clear() .
+customqueue.clear()
+print(customqueue)
